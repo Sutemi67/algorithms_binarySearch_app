@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
                     searchNumber =
                         binding.itemToSearchText.text.toString().toInt()
                     var i = -1
-                    val array = Array(count, { i++ })
+//                    val array = Array(count, { i++ })
+                    val array = List(count, {i++})
                     oneByOneSearch(array, searchNumber)
                     binarySearch(array, searchNumber)
                 } catch (e: Exception) {
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun oneByOneSearch(array: Array<Int>, searchItem: Int) {
+    private fun oneByOneSearch(array: List<Int>, searchItem: Int) {
         val time = measureTimeMillis {
             for (i in array.indices) {
                 if (array[i] == searchItem) {
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         summaryOfOne = 0
     }
 
-    private fun binarySearch(array: Array<Int>, searchItem: Int) {
+    private fun binarySearch(array: List<Int>, searchItem: Int) {
         val time = measureTimeMillis {
             var low = 0
             var high = array.size
