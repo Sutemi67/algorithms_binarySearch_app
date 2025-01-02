@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="header">
+        <item name="fontFamily">@font/outfit_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="text">
+        <item name="fontFamily">@font/outfit_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>
