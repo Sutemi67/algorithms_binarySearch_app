@@ -1,6 +1,7 @@
 package apc.appcradle.algorithms_binarysearch_app
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                         binding.itemToSearchText.text.toString().toInt()
                     var i = -1
 //                    val array = Array(count, { i++ })
-                    val array = List(count, {i++})
+                    val array = List(count, { i++ })
                     oneByOneSearch(array, searchNumber)
                     binarySearch(array, searchNumber)
                 } catch (e: Exception) {
@@ -73,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                 val guess = array[mid]
                 summaryOfSecond++
                 if (guess == searchItem) {
+                    Log.i(
+                        "TAG",
+                        "Поиск завершен, искомое число $guess, введенное число: $searchItem"
+                    )
                     break
                 } else if (guess > searchItem) {
                     high = mid - 1
