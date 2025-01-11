@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                     searchNumber =
                         binding.itemToSearchText.text.toString().toInt()
                     var i = -1
-//                    val array = Array(count, { i++ })
                     val array = List(count, { i++ })
                     oneByOneSearch(array, searchNumber)
                     binarySearch(array, searchNumber)
@@ -62,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         binding.oneCountTextMs.text =
             String.format(Locale.getDefault(), "$time ms")
         summaryOfOne = 0
+
     }
 
     private fun binarySearch(array: List<Int>, searchItem: Int) {
@@ -91,5 +91,6 @@ class MainActivity : AppCompatActivity() {
         binding.algoTimeText.text =
             String.format(Locale.getDefault(), "$time ms")
         summaryOfSecond = 0
+
     }
 }
