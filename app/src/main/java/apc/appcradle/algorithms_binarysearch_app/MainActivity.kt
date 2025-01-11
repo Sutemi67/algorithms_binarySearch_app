@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                     searchNumber =
                         binding.itemToSearchText.text.toString().toInt()
                     var i = -1
-                    val array = List(count, { i++ })
+                    val array = List(count) { i++ }
                     oneByOneSearch(array, searchNumber)
                     binarySearch(array, searchNumber)
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     binding.itemToSearchText.text?.clear()
                     binding.numberOfArrayText.text?.clear()
                 }
